@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subprocess Output</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io();
+        socket.on('output', function (data) {
+            var pre = document.createElement('pre');
+            pre.textContent = data;
+            document.body.appendChild(pre);
+        });
+    </script>
+</head>
+<body>
+<h1>Subprocess Output</h1>
+</body>
+</html>
